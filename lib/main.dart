@@ -53,7 +53,10 @@ class _BallState extends State<Ball> {
     return Center(
       child: FlatButton(
         onPressed: changeBall,
-        child: Image.asset('images/ball$ballNumber.$imageFormat'),
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(20),
+          child: Image.asset('images/ball$ballNumber.$imageFormat'),
+        ),
       ),
     );
   }
